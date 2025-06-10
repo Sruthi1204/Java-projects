@@ -30,7 +30,6 @@ public class GraphDFS {
             }
         }
     }
-
     // Method to print adjacency list
     public void printAdjList() {
         System.out.println("Adjacency List:");
@@ -42,7 +41,6 @@ public class GraphDFS {
             System.out.println();
         }
     }
-
     public static void main(String[] args) {
         int n = 4;
         int[][] edges = {
@@ -53,15 +51,11 @@ public class GraphDFS {
             {2, 3},
             {3, 3}
         };
-
         GraphDFS graph = new GraphDFS(n);
-
         for (int[] edge : edges) {
             graph.addEdge(edge[0], edge[1]);
         }
-
         graph.printAdjList();
-
         graph.dfs(0);
     }
 }
