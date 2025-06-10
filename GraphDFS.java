@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class GraphDFS {
     private int n; // Number of vertices
     private List<List<Integer>> adjList;
@@ -11,12 +10,10 @@ public class GraphDFS {
             adjList.add(new ArrayList<>());
         }
     }
-
     // Method to add edge
     public void addEdge(int src, int dest) {
         adjList.get(src).add(dest);
     }
-
     // DFS traversal
     public void dfs(int start) {
         boolean[] visited = new boolean[n];
@@ -24,7 +21,6 @@ public class GraphDFS {
         dfsUtil(start, visited);
         System.out.println();
     }
-
     private void dfsUtil(int node, boolean[] visited) {
         visited[node] = true;
         System.out.print(node + " ");
