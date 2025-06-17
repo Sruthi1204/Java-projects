@@ -1,13 +1,10 @@
 import java.util.*;
-
 public class nqueen {
     static int n = 4;
-
     public static void main(String[] args) {
         int[][] ar = new int[n][n];
         solve(ar, 0);
     }
-
     static void solve(int[][] arr, int r) {
 		print(arr);
             System.out.println();
@@ -21,7 +18,6 @@ public class nqueen {
             }
         }
     }
-
     static void print(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length; j++) {
@@ -30,20 +26,17 @@ public class nqueen {
             System.out.println();
         }
     }
-
     static boolean safe(int[][] arr, int r, int c) {
 
         for (int i = 0; i < r; i++) {
             if (arr[i][c] == 1) return false;
         }
-
         for (int i = r - 1, j = c - 1; i >= 0 && j >= 0; i--, j--) {
             if (arr[i][j] == 1) return false;
         }
         for (int i = r - 1, j = c + 1; i >= 0 && j < n; i--, j++) {
             if (arr[i][j] == 1) return false;
         }
-
         return true;
     }
 }
